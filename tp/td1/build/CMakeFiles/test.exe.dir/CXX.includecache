@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../mylib/mylib.h
+
+/home/sholde/dev/master/poocs/tp/td1/test.cpp
+gtest/gtest.h
+/home/sholde/dev/master/poocs/tp/td1/gtest/gtest.h
+mylib.h
+/home/sholde/dev/master/poocs/tp/td1/mylib.h
+

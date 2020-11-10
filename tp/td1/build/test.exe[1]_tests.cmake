@@ -1,0 +1,5 @@
+add_test( UnitTest.MyLibTestPrintTest /home/sholde/dev/master/poocs/tp/td1/build/test.exe [==[--gtest_filter=UnitTest.MyLibTestPrintTest]==] --gtest_also_run_disabled_tests)
+set_tests_properties( UnitTest.MyLibTestPrintTest PROPERTIES WORKING_DIRECTORY /home/sholde/dev/master/poocs/tp/td1/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test( UnitTest.MyLibTestPlusTest /home/sholde/dev/master/poocs/tp/td1/build/test.exe [==[--gtest_filter=UnitTest.MyLibTestPlusTest]==] --gtest_also_run_disabled_tests)
+set_tests_properties( UnitTest.MyLibTestPlusTest PROPERTIES WORKING_DIRECTORY /home/sholde/dev/master/poocs/tp/td1/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set( test.exe_TESTS UnitTest.MyLibTestPrintTest UnitTest.MyLibTestPlusTest)

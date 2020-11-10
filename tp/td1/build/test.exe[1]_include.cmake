@@ -1,0 +1,5 @@
+if(EXISTS "/home/sholde/dev/master/poocs/tp/td1/build/test.exe[1]_tests.cmake")
+  include("/home/sholde/dev/master/poocs/tp/td1/build/test.exe[1]_tests.cmake")
+else()
+  add_test(test.exe_NOT_BUILT test.exe_NOT_BUILT)
+endif()

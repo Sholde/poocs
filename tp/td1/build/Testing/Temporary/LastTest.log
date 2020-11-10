@@ -1,0 +1,66 @@
+Start testing: Nov 09 12:51 CET
+----------------------------------------------------------
+1/2 Testing: UnitTest.MyLibTestPrintTest
+1/2 Test: UnitTest.MyLibTestPrintTest
+Command: "/home/sholde/dev/master/poocs/tp/td1/build/test.exe" "--gtest_filter=UnitTest.MyLibTestPrintTest" "--gtest_also_run_disabled_tests"
+Directory: /home/sholde/dev/master/poocs/tp/td1/build
+"UnitTest.MyLibTestPrintTest" start time: Nov 09 12:51 CET
+Output:
+----------------------------------------------------------
+Running main() from /build/gtest/src/googletest-release-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = UnitTest.MyLibTestPrintTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UnitTest
+[ RUN      ] UnitTest.MyLibTestPrintTest
+[       OK ] UnitTest.MyLibTestPrintTest (0 ms)
+[----------] 1 test from UnitTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"UnitTest.MyLibTestPrintTest" end time: Nov 09 12:51 CET
+"UnitTest.MyLibTestPrintTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: UnitTest.MyLibTestPlusTest
+2/2 Test: UnitTest.MyLibTestPlusTest
+Command: "/home/sholde/dev/master/poocs/tp/td1/build/test.exe" "--gtest_filter=UnitTest.MyLibTestPlusTest" "--gtest_also_run_disabled_tests"
+Directory: /home/sholde/dev/master/poocs/tp/td1/build
+"UnitTest.MyLibTestPlusTest" start time: Nov 09 12:51 CET
+Output:
+----------------------------------------------------------
+Running main() from /build/gtest/src/googletest-release-1.10.0/googletest/src/gtest_main.cc
+Note: Google Test filter = UnitTest.MyLibTestPlusTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UnitTest
+[ RUN      ] UnitTest.MyLibTestPlusTest
+/home/sholde/dev/master/poocs/tp/td1/test.cpp:19: Failure
+Expected equality of these values:
+  1
+  c.plus(1, 1)
+    Which is: 2
+[  FAILED  ] UnitTest.MyLibTestPlusTest (0 ms)
+[----------] 1 test from UnitTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] UnitTest.MyLibTestPlusTest
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"UnitTest.MyLibTestPlusTest" end time: Nov 09 12:51 CET
+"UnitTest.MyLibTestPlusTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 09 12:51 CET
