@@ -7,6 +7,7 @@
 class UnsteadySimulator : public Simulator
 {
 private:
+  const double delta = 0.2;
   Particles p;
   
 public:

@@ -14,10 +14,10 @@ UnsteadySimulator::~UnsteadySimulator()
 
 void UnsteadySimulator::compute(double time)
 {
-  for (double local_time = time - 1 + 0.2; local_time <= time; local_time += 0.2)
+  for (auto max_time = time + 1; time < max_time; time += this->delta)
     {
-      this->p.compute_evolution(local_time);
-      this->p.print(local_time);
-      this->p.export_particles(local_time);
+      this->p.compute_evolution(time);
+      this->p.print(time);
+      this->p.export_particles(time);
     }
 }

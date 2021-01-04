@@ -14,6 +14,7 @@ SteadySimulator::~SteadySimulator()
 
 void SteadySimulator::compute(double time)
 {
+  time++;
   this->p.compute_evolution(time);
   this->p.print(time);
   this->p.export_particles(time);
