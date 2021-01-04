@@ -1,0 +1,11 @@
+#ifndef _tuple_c
+#define _tuple_c
+
+#include <iostream>
+
+void Tuple<T, U, V>::print()
+{
+  std::cout << "here" << std::endl;
+}
+
+#endif

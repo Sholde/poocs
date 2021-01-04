@@ -1,0 +1,12 @@
+#include <iostream>
+#include <string>
+
+using 
+
+int main()
+{
+  std::unique_prt<std::string> str = std::make_unique<std::string>("alien");
+  
+  
+  return 0;
+}
