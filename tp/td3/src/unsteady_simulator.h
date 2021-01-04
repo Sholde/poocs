@@ -7,10 +7,10 @@
 class UnsteadySimulator : public Simulator
 {
 private:
-  Particles &p;
+  Particles p;
   
 public:
-  UnsteadySimulator(Particles &p);
+  UnsteadySimulator(int nb_particles);
   ~UnsteadySimulator();
   
   void compute(double time) override;

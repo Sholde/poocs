@@ -1,7 +1,6 @@
 #include "gtest/gtest.h"
 
 #include "particles.h"
-#include "simulator.h"
 #include "steady_simulator.h"
 #include "unsteady_simulator.h"
 
@@ -25,16 +24,14 @@ TEST(UnitTest, compute_particles_evolution_test)
 
 TEST(UnitTest, init_simulator_test)
 {
-  Particles p(4);
-  SteadySimulator ss(p);
-  UnsteadySimulator us(p);
+  SteadySimulator ss(78);
+  UnsteadySimulator us(1);
 }
 
 TEST(UnitTest, compute_simulator_test)
 {
-  Particles p(1);
-  SteadySimulator ss(p);
-  UnsteadySimulator us(p);
+  SteadySimulator ss(1);
+  UnsteadySimulator us(1);
 
   ss.compute(1);
   us.compute(1);

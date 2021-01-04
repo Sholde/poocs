@@ -2,7 +2,7 @@
 
 #include "unsteady_simulator.h"
 
-UnsteadySimulator::UnsteadySimulator(Particles &p) : p(p)
+UnsteadySimulator::UnsteadySimulator(int nb_particles) : p(nb_particles)
 {
   std::cout << "--- init simulator ---" << std::endl;
 }
@@ -14,9 +14,10 @@ UnsteadySimulator::~UnsteadySimulator()
 
 void UnsteadySimulator::compute(double time)
 {
-  for (double local_time = time; local_time < time + 1; local_time += 0.2)
+  for (double local_time = time - 1 + 0.2; local_time <= time; local_time += 0.2)
     {
       this->p.compute_evolution(local_time);
       this->p.print(local_time);
+      this->p.export_particles(local_time);
     }
 }

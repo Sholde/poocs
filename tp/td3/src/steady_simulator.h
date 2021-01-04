@@ -7,10 +7,10 @@
 class SteadySimulator : public Simulator
 {
 private:
-  Particles &p;
+  Particles p;
   
 public:
-  SteadySimulator(Particles &p);
+  SteadySimulator(int nb_particles);
   ~SteadySimulator();
   
   void compute(double time) override;

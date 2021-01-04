@@ -37,25 +37,33 @@ void Particles::compute_evolution(double time)
   for (int i = 0; i < this->nb_particles; ++i)
     {
       std::cout << "--- compute particle " << i << " evolution at time : " << time << " ---" << std::endl;
+
+      // Set speed
       this->particles_info[i].second = this->gas.speed;
-      this->particles_info[i].first += this->particles_info[i].second;
+
+      // Set position
+      this->particles_info[i].first = this->particles_info[i].second;
     }
 }
 
 void Particles::export_particles(double time) const
 {
-  std::string pos_file = "particle_positions_t" + std::to_string((int)time);
-  std::string vel_file = "particle_velocities_t" + std::to_string((int)time);
+  std::string pos_file = "particle_positions";
+  std::string vel_file = "particle_velocities";
     
-  std::cout << "--- export particles positions at time : " << time << " in file " << pos_file << std::endl;
-  std::cout << "--- export particles velocities at time : " << time << " in file " << vel_file << std::endl;
-  
-  std::ofstream opos(pos_file, std::ios::binary);
-  std::ofstream ovel(vel_file, std::ios::binary);
+  std::cout << "--- Export particles positions at time = " << time << " in file " << pos_file << std::endl;
+  std::cout << "--- Export particles velocities at time = " << time << " in file " << vel_file << std::endl;
+
+  std::ofstream opos(pos_file, std::ios::app);
+  std::ofstream ovel(vel_file, std::ios::app);
+
+  int count = 0;
 
   for (auto [pos, vel] : this->particles_info)
     {
-      opos << pos << std::endl;
-      ovel << vel << std::endl;
+      opos << count << " " << pos << std::endl;
+      ovel << count << " " << vel << std::endl;
+
+      count++;
     }
 }

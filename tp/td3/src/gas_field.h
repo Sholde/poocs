@@ -3,7 +3,7 @@
 
 struct GasField
 {
-  double speed = 1;
+  const double speed = 1;
 };
 
 #endif //_gas_field_h
