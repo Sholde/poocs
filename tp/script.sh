@@ -6,6 +6,8 @@ fi
 
 name=$1
 rm -Rf *$name
-cp -r td3/ $name
+mkdir $name
+cp -r td3/ $name/td3
+cp -r td4/ $name/td4
 tar -cvf $name.tar $name
 gzip $name.tar

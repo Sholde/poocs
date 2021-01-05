@@ -1,0 +1,30 @@
+#+title: README
+
+* Install
+
+#+begin_src bash
+mkdir build
+cd build
+cmake ..
+make
+#+end_src
+
+* Run
+
+In ressources file :
+
+#+begin_src bash
+./exec.sh
+#+end_src
+
+* Usage
+
+ - simulator type : ~--steady~ or ~--unsteady~~
+ - number of particle : at least 1
+ - delta time : postivive real
+ - max time : in prefernce integer number
+
+* Graphics and data
+
+  They are on ~ressources/~ directory.
+
