@@ -48,8 +48,8 @@ void Particles::compute_evolution(double time)
 
 void Particles::export_particles(double time) const
 {
-  std::string pos_file = "particle_positions";
-  std::string vel_file = "particle_velocities";
+  std::string pos_file = "particle_positions_" + std::to_string(time);
+  std::string vel_file = "particle_velocities_" + std::to_string(time);
     
   std::cout << "--- Export particles positions at time = " << time << " in file " << pos_file << std::endl;
   std::cout << "--- Export particles velocities at time = " << time << " in file " << vel_file << std::endl;

@@ -4,4 +4,7 @@ set output "velocities.png"
 
 set title "particle velocities"
 
-plot "particle_velocities"
+filelist = system("ls particle_velocities*")
+
+plot for [filename in filelist] filename using 1:2
+

@@ -12,9 +12,9 @@ UnsteadySimulator::~UnsteadySimulator()
   std::cout << "--- destroy simulator ---" << std::endl;
 }
 
-void UnsteadySimulator::compute(double time)
+void UnsteadySimulator::compute(double max_time)
 {
-  for (auto max_time = time + 1; time < max_time; time += this->delta)
+  for (auto time = 0; time < max_time; time += this->delta)
     {
       this->p.compute_evolution(time);
       this->p.print(time);

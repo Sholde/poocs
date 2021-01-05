@@ -14,7 +14,7 @@ public:
   UnsteadySimulator(int nb_particles);
   ~UnsteadySimulator();
   
-  void compute(double time) override;
+  void compute(double max_time) override;
 };
 
 #endif // _unsteady_simulator_h

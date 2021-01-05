@@ -8,7 +8,7 @@ public:
   virtual ~Simulator() = default;
 
   // Méthode
-  virtual void compute(double time) = 0;
+  virtual void compute(double max_time) = 0;
 };
 
 #endif // _simulator_h

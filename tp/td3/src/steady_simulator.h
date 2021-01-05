@@ -13,7 +13,7 @@ public:
   SteadySimulator(int nb_particles);
   ~SteadySimulator();
   
-  void compute(double time) override;
+  void compute(double max_time) override;
 };
 
 #endif // _steady_simulator_h

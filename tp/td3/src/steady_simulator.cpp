@@ -12,10 +12,14 @@ SteadySimulator::~SteadySimulator()
   std::cout << "--- destroy simulator ---" << std::endl;
 }
 
-void SteadySimulator::compute(double time)
+void SteadySimulator::compute(double max_time)
 {
-  time++;
-  this->p.compute_evolution(time);
-  this->p.print(time);
-  this->p.export_particles(time);
+  for (double time = 1; time <= max_time; ++time)
+    {
+      time;
+      this->p.compute_evolution(time);
+      this->p.print(time);
+    }
+  
+  this->p.export_particles(max_time);
 }

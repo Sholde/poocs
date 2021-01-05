@@ -4,4 +4,7 @@ set output "positions.png"
 
 set title "particle positions"
 
-plot "particle_positions" 
+filelist = system("ls particle_position*")
+
+plot for [filename in filelist] filename using 1:2
+

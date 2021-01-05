@@ -18,10 +18,7 @@ int main(int argc, char **argv)
 
   // Compute
   const int max_time = strtoll(argv[2], nullptr, 10);
-  for (int time = 0; time < max_time; ++time)
-    {
-      s->compute(time);
-    }
+  s->compute(max_time);
 
   return 0;
 }
